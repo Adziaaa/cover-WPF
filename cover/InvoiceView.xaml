@@ -1,0 +1,189 @@
+﻿<UserControl x:Class="cover.InvoiceView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:cover" xmlns:ig="http://schemas.infragistics.com/xaml"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <TabControl Name="tbMain" TabStripPlacement="Left" >
+            <TabItem Header="Optimizer">
+                <TabControl>
+                    <TabItem Header="Summer">
+                        <TabControl>
+                            <TabItem Header="Cheapest Model">
+                                <ListBox HorizontalAlignment="Left" VerticalAlignment="Top">
+                                    <ListBoxItem>
+                                        Model Name: Gas Motor
+                                    Time from: 7/8/2023 0:00
+                                    Time to: 7/8/2023 1:00
+                                    Produced heat: 1.79
+                                    Net Electricity: 1.3425
+                                    Production Costs: 546.9444444444445
+                                    Produced CO2: 318.22222222222223
+                                    </ListBoxItem>
+                                    <!-- More ListBoxItems -->
+                                </ListBox>
+                            </TabItem>
+                            <TabItem Header="Least CO2">
+                                <ListBox HorizontalAlignment="Left" VerticalAlignment="Top">
+                                    <ListBoxItem>
+                                        Model Name: Electric Boiler
+                                    Time from: 7/8/2023 0:00
+                                    Time to: 7/8/2023 1:00
+                                    Produced heat: 1.79
+                                    Net Electricity: -1.79
+                                    Production Costs: 11.1875
+                                    Produced CO2: 0
+                                    </ListBoxItem>
+                                    <!-- More ListBoxItems -->
+                                </ListBox>
+                            </TabItem>
+                        </TabControl>
+                    </TabItem>
+                    <TabItem Header="Winter">
+                        <TabControl>
+                            <TabItem Header="Cheapest Model">
+                                <ListBox HorizontalAlignment="Left" VerticalAlignment="Top">
+                                    <ListBoxItem>
+                                        Model Name: Gas Motor
+                                    Time from: 2/8/2023 0:00
+                                    Time to: 2/8/2023 1:00
+                                    Produced heat: 3.6
+                                    Net Electricity: 2.7
+                                    Production Costs: 1100
+                                    Produced CO2: 640
+                                    </ListBoxItem>
+                                    <!-- More ListBoxItems -->
+                                </ListBox>
+                            </TabItem>
+                            <TabItem Header="Least CO2">
+                                <ListBox HorizontalAlignment="Left" VerticalAlignment="Top">
+                                    <ListBoxItem>
+                                        Model Name: Electric Boiler
+                                    Time from: 2/8/2023 0:00
+                                    Time to: 2/8/2023 1:00
+                                    Produced heat: 6.62
+                                    Net Electricity: -6.62
+                                    Production Costs: 41.375
+                                    Produced CO2: 0
+                                    </ListBoxItem>
+                                    <!-- More ListBoxItems -->
+                                </ListBox>
+                            </TabItem>
+                        </TabControl>
+                    </TabItem>
+                </TabControl>
+
+            </TabItem>
+            <TabItem Background="Bisque"  Name="Danfossinfo" Header="About Danfoss ">
+                <Grid >
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Calendar HorizontalAlignment="Left" Margin="185,90,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.RowSpan="3" Height="174" Width="204" Background="#FFEE2F2F"/>
+                    <TextBlock Grid.Row="3" FontWeight="Bold" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="209,0,0,40">ENGINEERING
+TOMORROW</TextBlock>
+                    <StackPanel Grid.Row="0">
+                        <Border Height="49" Width="577" CornerRadius="7" BorderThickness="20">
+                            <Border.BorderBrush>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                    <GradientStop Color="Red" Offset="0.0" />
+                                    <GradientStop Color="OrangeRed" Offset="0.50" />
+                                </LinearGradientBrush>
+                            </Border.BorderBrush>
+                            <Rectangle    >
+                                <Rectangle.Fill>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                        <GradientStop Color="Red" Offset="0.0" />
+                                        <GradientStop Color="OrangeRed" Offset="0.50" />
+                                    </LinearGradientBrush>
+                                </Rectangle.Fill>
+
+                            </Rectangle>
+                        </Border>
+                    </StackPanel>
+                    <TextBlock    HorizontalAlignment="Left" TextWrapping="NoWrap" VerticalAlignment="Top" FontSize="37" FontWeight="Bold" Height="44" Width="255" Text=" D A N F O S S " Background="Transparent" Foreground="White" Margin="158,0,0,0"/>
+                    <TextBlock HorizontalAlignment="Center" TextWrapping="WrapWithOverflow" Margin="0,69,0,0" Width="553" >Danfoss is a Danish multinational company, based in Denmark, with more than 41,928 employees globally. Danfoss was founded in 1933 by engineer Mads Clausen</TextBlock>
+                    <TextBlock  HorizontalAlignment="Center" Grid.Row="1" TextWrapping="WrapWithOverflow" Margin="0,0,0,38" Width="553">Danfoss Group - global manufacturer of technology components and solutions for refrigeration and air conditioning,
+                       heating, water distribution and working machinery. The company's net profit for 2015 was €348 million,
+                        with sales of €5.1 billion[1]. The group employs around 28,000 employees worldwide.
+                        The company is headquartered in Nordborg, Denmark.</TextBlock>
+                </Grid>
+            </TabItem>
+            <TabItem Background="Red" Name="HPO" Header="Heat Production Optimization"></TabItem>
+            <TabItem Background="Red" Name ="Project_Description" Header="Project Description">
+                <Grid>
+                    <TextBlock Foreground="DarkBlue" FontSize="20" >Case</TextBlock>
+                    <TextBlock FontSize="15" TextWrapping="WrapWithOverflow" Margin="0,32,0,0" >HeatItOn is the utility in the city of Heatingtonwhich has to secure the heat delivery to approx. 
+                        1600buildingsthrough a single district heating network. They produce heat with a number of traditional 
+                        heat-only boilers as well as units that combine the production of heat with the production / consumption 
+                        of electricity (CHPs). They are planning the heat schedules manually but now theywantto cost optimize their production
+                        .The goal of the project is to define heat schedules for all available production units with the lowest possible 
+                        expensesand the highest profit on the electricity market.</TextBlock>
+                </Grid>
+            </TabItem>
+            <TabItem Background="Red" Header="Excel" Name="Excel">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <TextBlock FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="WrapWithOverflow" FontWeight="Bold" FontStyle="Italic">To load the data from file "2024 Heat Production Optimization - Danfoss Deliveries - Source Data Manager" press Load</TextBlock>
+                    <Button Background="Red" Click="Button_Click" Grid.Row="1">Load</Button>
+                    <ig:XamSpreadsheet Grid.Row=" 2" x:Name="_spreedsheet" />
+                    <ig:XamDataChart x:Name="data" HorizontalAlignment="Left" Margin="668,10,0,0" Grid.Row="3" VerticalAlignment="Top"/>
+
+                </Grid>
+
+            </TabItem>
+            <TabItem Background="Red" Header="Asset Manager Info">
+    <Grid>
+        <ListBox x:Name="ListBoxNames" >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Name, StringFormat='Name: {0}'}"/>
+                        <TextBlock Text="{Binding MaxHeat, StringFormat='Max Heat: {0}'}"/>
+                        <TextBlock Text="{Binding MaxElectricity, StringFormat='Max Electricity: {0}'}"/>
+                        <TextBlock Text="{Binding ProductionCosts, StringFormat='Production Costs: {0}'}"/>
+                        <TextBlock Text="{Binding CO2Consumpition, StringFormat='CO2 Consumption: {0}'}"/>
+                        <TextBlock Text="{Binding GasConsumption, StringFormat='Gas Consumption: {0}'}"/>
+                        <TextBlock Text="{Binding IsOperating, StringFormat='IsOperating: {0}'}"/>
+                                    <CheckBox></CheckBox>
+
+                    </StackPanel>
+                    
+                </DataTemplate>
+                
+            </ListBox.ItemTemplate>
+        </ListBox>
+        
+    </Grid>
+</TabItem>
+            <TabItem Margin="-1,308,-1,-327" Header="Log Out" Background="Red" Name="Log_Out">
+                <Grid>
+                    
+                    <DocumentViewer />
+                    <Button Margin="212,222,213,189" Background="#FFED3232" Click="Button_Click" ></Button>
+                    <TextBlock Margin="200,198,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Width="240">Are you sure you want to log out?</TextBlock>
+                    <TextBlock Margin="226,226,234,193" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Foreground="#FFFFF8F8">Yes</TextBlock>
+               
+                </Grid>
+            </TabItem>
+            <ListView d:ItemsSource="{d:SampleData ItemCount=5}">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <ListBox d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        </TabControl>
+    </Grid>
+</UserControl>

@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="cover.LoginView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:cover"
+             mc:Ignorable="d" 
+            
+             d:DesignHeight="450" d:DesignWidth="800" 
+             >
+    <Grid>
+        <!--<ContentControl  x:Name="MainContent"/>-->
+        <Image Source="DanfosBuilding.png" Margin="-3,0,3,0" ></Image>
+        <TextBox HorizontalAlignment="Left" Margin="351,61,0,0" BorderBrush="Transparent" TextWrapping="Wrap" Text="Welccome " VerticalAlignment="Top" Width="120"  FontSize="23"  Background="Transparent" FontWeight="Bold"/>
+        <TextBox HorizontalAlignment="Left" Margin="362,30,0,0"  BorderBrush="Transparent" TextWrapping="Wrap" Text="&#x9;&#x9;in " VerticalAlignment="Top" Width="98"  FontSize="23" Background="Transparent" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom"/>
+        <TextBox HorizontalAlignment="Left" Margin="274,115,0,0" BorderBrush="Transparent" TextWrapping="WrapWithOverflow" Text="Heat Production Optimization " VerticalAlignment="Top" Width="338"  FontSize="23"  Background="Transparent" FontWeight="Bold" Height="86"/>
+        <!--add log in text somehwo-->
+        <Button Content="Log in" x:Name="Log_In"  Click="LoginButton_Clicked" Foreground="White"  Margin="138,297,144,84" >
+            <Button.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                    <GradientStop Color="#ec2075" Offset="0.0"/>
+                    <GradientStop Color="#f33944" Offset="0.5"/>
+                </LinearGradientBrush>
+            </Button.Background>
+                
+        </Button>
+        <TextBlock  FontSize="17" FontWeight="Bold" Margin="587,371,40,1"><Run Text="Group 7 "/><LineBreak/><Run Text="Semester Project"/></TextBlock>
+    </Grid>
+</UserControl>
